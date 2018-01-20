@@ -12,6 +12,6 @@ RSpec.describe WelcomeController, type: :controller do
        it "renders the about template" do
          get :about
          expect(response).to render_template("about")
-       end
-     end  
+      end
+    end  
 end
