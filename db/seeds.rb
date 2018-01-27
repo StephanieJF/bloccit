@@ -16,6 +16,17 @@ posts = Post.all
   )
 end
 
+  Post.find_or_create_by!(
+    title: "Unique",
+    body: "Unique Body"
+  )
+
+  p = Post.find(101)
+
+  p.comments.find_or_create_by!(
+    body: "Another Unique Body"
+  )
+
 puts "Seed finished"
 puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"
