@@ -44,7 +44,7 @@ RSpec.describe QuestionsController, type: :controller do
 
     it "redirects to the new question" do
       question :create, params: { question: { title: RandomData.random_sentence, body: RandomData.random_paragraph } }
-      expect(response).to redirect_to Question.last
+      expect(response).to redirect_to Quesiton.last
     end
   end
 end
