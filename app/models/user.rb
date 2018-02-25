@@ -10,6 +10,5 @@ class User < ApplicationRecord
                uniqueness: { case_sensitive: false },
                length: { minimum: 3, maximum: 254 }
 
-   # #6
      has_secure_password
 end
