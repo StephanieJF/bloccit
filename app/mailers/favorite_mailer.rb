@@ -13,4 +13,5 @@ class FavoriteMailer < ApplicationMailer
 
     mail(to: user.email, subject: "New comment on #{post.title}")
   end
+
 end
