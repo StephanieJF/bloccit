@@ -34,4 +34,6 @@
 <% end %>
 
 <h2>Favorites</h2>
-<%= @user.favorites %>
+<% @fav.each do |post| %>
+  <%= link_to post.title, topic_post_path(post.topic, post) %> <br>
+<% end %>
