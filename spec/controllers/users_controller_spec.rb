@@ -61,6 +61,12 @@ RSpec.describe UsersController, type: :controller do
     end
   end
 
+  describe "user view" do
+    it 'displays a list of posts the user favorited' do
+
+    end
+  end
+
   describe "not signed in" do
     let(:factory_user) { create(:user) }
 

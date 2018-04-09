@@ -6,4 +6,8 @@ module UsersHelper
   def has_comments?
     @user.comments.count > 0
   end
+
+  def has_favorites?
+    @user.favorites.count > 0
+  end
 end
