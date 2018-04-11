@@ -1,15 +1,14 @@
-<% favs = Post.where(id:@user.favorites) %>
-<% favs.each do |post| %>
+<% @user.favorites.each do |favorite| %>
 <div class="media">
   <div class="media-left">
-<%= image_tag post.user.avatar_url(40) %>
+<%= image_tag favorite.post.user.avatar_url(40) %>
 </div>
 <div class="media-body">
   <h4 class="media-heading">
-<%= link_to post.title, topic_post_path(post.topic, post) %>
-</h4>
-<small><%= pluralize(post.comments.count, 'Comment') %></small>
-<small><%= pluralize(post.points, 'Vote') %></small><br>
-</div>
-</div>
+    <%= link_to favorite.post.title, topic_post_path(favorite.post.topic, favorite.post) %>
+    </h4>
+    <small><%= pluralize(favorite.post.comments.count, 'Comment') %></small>
+    <small><%= pluralize(favorite.post.points, 'Vote') %></small><br>
+    </div>
+  </div>
 <% end %>

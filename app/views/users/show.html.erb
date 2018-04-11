@@ -35,7 +35,7 @@
 
 <h2>Favorites</h2>
 <% if has_favorites? %>
-  <%= render partial: 'favorites/listfavorites', locals: { user: @user } %>
+  <%= render partial: 'favorites/listfavorites' %>
 <% else %>
   <p><%= "#{@user.name} has not favorited any posts yet."%></p>
 <% end %>
